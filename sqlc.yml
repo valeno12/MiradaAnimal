@@ -1,0 +1,11 @@
+version: "2"
+sql:
+  - engine: "mysql"
+    schema: "config/database/schema"
+    queries: "config/database/queries"
+    gen:
+      go:
+        package: "models"
+        out: "internal/models"
+        rename:
+          preguntum: Pregunta
